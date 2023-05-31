@@ -6,6 +6,7 @@
 #include<QTimer>
 #include<QString>
 #include<QDebug>
+#include<QDir>
 
 class worship;
 class equipment{//装备 1战列主炮 2巡洋主炮 3驱逐主炮 4鱼雷 5轰炸机 6舰载机
@@ -42,14 +43,17 @@ public:
     QTimer *timer=nullptr;
     QSound *sound=nullptr;
     QString AttackPath;
-    QString GetInPath;
-    QString SunkPath;
-    QString HangPath;
+    QString MovePath;
+    QString DeadPath;
+    QString StandPath;
+    QString VictoryPath;
+    QString TuozhuaiPath;
     QLabel *label=nullptr;
     void Attack(worship &p);
     void Extratk(worship &p,bool extra);
     void Hurt(double harm);
     void Victory();
+    void Dead();
 signals:
 public slots:
 };

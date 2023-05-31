@@ -4,6 +4,12 @@ worship::worship(QString _kind,QString _name)
 {
     kind=_kind;
     name=_name;
+    AttackPath=":/material/"+name+"/attack.gif";
+    MovePath=":/material/"+name+"/move.gif";
+    StandPath=":/material/"+name+"/stand.gif";
+    VictoryPath=":/material/"+name+"/victory.gif";
+    DeadPath=":/material/"+name+"/dead.gif";
+    TuozhuaiPath=":/material/"+name+"/tuozhuai.gif";
     if(kind=="destroyer"){
         hp=1000;
         atk=100;
@@ -184,5 +190,8 @@ void worship::Extratk(worship &p,bool extra){//鱼雷攻击
 }
 void worship::Victory(){//后续补充舰船胜利动作
     qDebug()<<"victory\n";
+}
+void worship::Dead(){
+    qDebug()<<"failed\n";
 }
 
