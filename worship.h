@@ -2,7 +2,6 @@
 #define WORSHIP_H
 #include<QLabel>
 #include<QMovie>
-#include<QSound>
 #include<QTimer>
 #include<QString>
 #include<QDebug>
@@ -24,7 +23,7 @@ public:
 };
 
 
-class worship
+class worship:public QLabel
 {
     Q_OBJECT
 public:
@@ -41,7 +40,6 @@ public:
     equipment *equip=nullptr;//舰船装备 ////////无法实现，子类无法用父类指针
     QMovie *movie=nullptr;
     QTimer *timer=nullptr;
-    QSound *sound=nullptr;
     QString AttackPath;
     QString MovePath;
     QString DeadPath;
