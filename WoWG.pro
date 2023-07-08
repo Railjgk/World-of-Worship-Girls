@@ -10,16 +10,34 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Button_Ship.cpp \
+    end.cpp \
+    levelselection.cpp \
     main.cpp \
-    widget.cpp \
+    myanimation.cpp \
+    mymenu.cpp \
+    mypushbutton.cpp \
+    pause.cpp \
+    w_battle.cpp \
     worship.cpp
 
 HEADERS += \
-    widget.h \
+    Button_Ship.h \
+    end.h \
+    levelselection.h \
+    myanimation.h \
+    mymenu.h \
+    mypushbutton.h \
+    pause.h \
+    w_battle.h \
     worship.h
 
 FORMS += \
-    widget.ui
+    end.ui \
+    levelselection.ui \
+    mymenu.ui \
+    pause.ui \
+    w_battle.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
